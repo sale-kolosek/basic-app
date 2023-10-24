@@ -1,4 +1,4 @@
-image: kolosek/ruby-2.7.6
+image: kolosek/ruby-2.7.2
 
 cache:
   #key: ${CI_COMMIT_REF_SLUG}
