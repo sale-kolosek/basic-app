@@ -37,3 +37,4 @@ rspec:
   artifacts:
     paths:
       - coverage/
+      
