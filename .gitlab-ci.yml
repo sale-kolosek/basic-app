@@ -14,8 +14,13 @@ variables:
   BUNDLE_PATH: vendor/bundle
   DISABLE_SPRING: 1
   DB_HOST: postgres
+  RUBY_CI_API_URL: apx.ruby.ci
+  DISABLE_SPRING: 1
 
 before_script:
+  - export RBCI_BUILD_ID="$CI_COMMIT_SHORT_SHA$CI_JOB_ID"
+  - export RBCI_COMMIT="$CI_COMMIT_SHA"
+  - export RBCI_BRANCH="$CI_COMMIT_REF_NAME"
   - gem update bundler
   - rm config/database.yml
   - cp config/database.yml.ci config/database.yml
@@ -37,4 +42,3 @@ rspec:
   artifacts:
     paths:
       - coverage/
-      
