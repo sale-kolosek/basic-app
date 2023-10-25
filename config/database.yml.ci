@@ -1,11 +1,5 @@
-default: &default
-  adapter: postgresql
-  encoding: unicode
-  username: postgres
-  password: postgres
-  host: <%= ENV['DB_HOST'] %>
+test:
+  adapter: sqlite3
+  database: db/test.sqlite3
   pool: 5
-  database: ci_db
-  
-test: &test
-  <<: *default
+  timeout: 5000
