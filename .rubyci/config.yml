@@ -5,4 +5,4 @@ build_packs:
     version: 2.7.2
   rails: {}
   node_js:
-    version: 18.0.0
+    version: 18
