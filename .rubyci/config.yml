@@ -1,8 +1,0 @@
-version: 1
-
-build_packs:
-  ruby:
-    version: 2.7.2
-  rails: {}
-  node_js:
-    version: 18
