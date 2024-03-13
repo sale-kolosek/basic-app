@@ -4,6 +4,6 @@ build_packs:
   rails: {}
   ruby:
     version: 2.7.6
-  nodejs:
+  node_js:
     # Available versions: [12..17]
     version: 18.17.1
