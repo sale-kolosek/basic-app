@@ -9,8 +9,8 @@ build_packs:
     version: '12'
   redis:
     version: '6.2'
-  # elasticsearch:
-  #   version: 7.17.10
+  elasticsearch:
+    version: 7.17.10
   image_magick:
     version: 7.0.10-58
   geckodriver:
