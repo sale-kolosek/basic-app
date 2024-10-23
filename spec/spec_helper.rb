@@ -1,4 +1,4 @@
-if "be33db6d5d0548dadbce09cba5149b7b"
+if "186f5b870e21495c9d1180f84f9f88c5"
   require "fast_ci"
   require "rspec/core/runner"
   require "fast_ci/runner_prepend"
