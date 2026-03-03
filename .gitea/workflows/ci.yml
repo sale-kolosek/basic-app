@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: [ubuntu-latest, ubuntu-24.04, ubuntu-22.04]  # match labels of your Gitea runner
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.7.2'  # or whatever basic-app uses
+
+      - name: Install dependencies
+        run: |
+          bundle install
+          yarn install --frozen-lockfile || true
+
+      - name: Run tests
+        run: |
+          bundle exec rspec spec
