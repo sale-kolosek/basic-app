@@ -1,4 +1,5 @@
-if "186f5b870e21495c9d1180f84f9f88c5"
+if ENV["FAST_CI_SECRET_KEY"]
+  puts 'Works'
   require "fast_ci"
   require "rspec/core/runner"
   require "fast_ci/runner_prepend"
